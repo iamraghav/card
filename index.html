@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col s1">
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="card card-1">
+                        <div class="card-image">
+                            <img id="pic" src="1.bmp">
+                        </div>
+                        <p id="pp">Offer</p>
+                        <div class="card-title">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, ipsum.
+                        </div>
+                        <div class="card-content">
+                            I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae commodi natus laboriosam perferendis, provident dolorum veniam! Voluptates neque distinctio eius in incidunt atque ea assumenda ratione id, quaerat non accusantium maiores inventore. Consectetur incidunt, molestias velit, modi optio nam suscipit adipisci culpa, iusto natus et quis. Reprehenderit soluta ea quibusdam.
+                            <hr>
+                            <button class="btn green">some link</button>
+                        </div>
+                        <p id="tt">Raghav</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+                $(".card-content").hide();
+            });
+
+        $(".card").mouseenter(function(){
+            $("#pic").animate({ "height": "100px" }, 300);
+            $("#tt").hide();
+            $("#pp").hide();
+            $(".card-content").show();
+        });
+
+        $(".card").mouseleave(function () {
+            $("#pic").animate({ "height": "350px" }, 300);
+            $("#tt").show();
+            $("#pp").show();
+            $(".card-content").hide();
+                
+            });
+    </script>
+</body>
+
+</html>
